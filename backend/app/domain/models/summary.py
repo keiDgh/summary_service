@@ -1,13 +1,12 @@
 from dataclasses import dataclass
 from uuid import UUID
 
-from datetime import datetime
-
 @dataclass
 class Summary:
     summary_id: int
     public_summary_id: UUID
+    resource_key: str
     title: str
-    author: str
     content: str
-    created_at: datetime
+    author: str | None = None
+    # Дать переменную datetime (когда был link to user)

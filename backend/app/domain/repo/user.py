@@ -18,6 +18,3 @@ class UserRepository(Repository[User]):
 
     @abstractmethod
     async def change_password(self, user_id: int, new_password: str) -> User: ...
-
-    @abstractmethod
-    async def logout(self, user_id: int) -> None: ... 
